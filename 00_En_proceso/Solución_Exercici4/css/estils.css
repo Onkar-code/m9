@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap');
+
+/* --Declaración de variables--*/
+root{
+	--colorverdclar: #a7c712;
+	--colorverdfosc: #00454c;
+}
+
+body{
+	display: flex;
+}
+
+#principal{	
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-style: solid; 	
+}
+
+#presentació{	
+	display: flex;
+	justify-content: space-between;
+
+}	
+
+#ubicació{	
+	display: flex;
+	justify-content: space-between;
+}
+
+#contacte{
+	display: flex;
+	flex-direction: column;
+}
+
+p{
+	width: 406.25px;
+}
+
+
+/*--propiedades para la fuente--*/
+h1{
+	font-size: 21px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: var(--colorverdfosc);
+	width: 40%;
+}
+
+p{
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}

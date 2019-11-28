@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'conduit_itcbold';
+    src: url('fonts/conduit_itc_bold-webfont.woff2') format('woff2'),
+         url('fonts/conduit_itc_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit_itclight';
+    src: url('fonts/conduit_itc_light-webfont.woff2') format('woff2'),
+         url('fonts/conduit_itc_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit_itcmedium';
+    src: url('../fonts/conduit_itc_medium-webfont.woff2') format('woff2'),
+         url('../fonts/conduit_itc_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root{
+	--colorgranate:#9e0f2e;		/*Color granate: #9e0f2e*/
+	--colormarro:#b4ab9b;		/*Color marró hover i active: #b4ab9b*/
+	--colortext_cap:#455055;    /*Color gris fosc capçalera i text: #455055*/
+	--colormainbg:#f6f7f8; 		/*Color background input text: #f6f7f8*/
+	--colorborde:#dadee1;		/*Color border input text: #dadee1*/
+	--colorbody:#ebefef;		/*Body background: #ebefef*/
+	
+	/*El width del div blanc és 330px, centra’l a la pàgina*/
+}
+
+section{
+	margin-top:14px; 
+}
+body{
+	background-color: var(--colorbody);
+}
+
+#cabecera{
+	background-color: var(--colortext_cap);
+	font-family: conduit_itcmedium;
+	font-size: 27px;
+	color: white;
+	
+	width: 330px;
+	height: 32px;
+	padding:14px 0px 14px 0px;
+	margin: 0px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* POSICIONAR LA CABECERA DE FORMA QUE LA BOLA SE MOVERÁ RESPECTO DICHO CONTENTEDOR*/
+	position: relative;
+}
+
+p{
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	font-family: conduit_itcmedium;
+	font-size: 20px;
+	color:var(--colortext_cap);
+}
+
+#content{
+	width: 330px;	
+	height: 337px;
+	margin-bottom: 0px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}	
+
+#cabecera img{
+	position: absolute;
+	top:-14px;
+	left:20px;
+
+}
+
+button{
+	padding: 10px 0px 10px 0px;
+	font-family:conduit_itcmedium;
+	font-size: 18px;
+	width: 230px;
+	background-color: var(--colorgranate); 
+	color:white;
+	border-radius: 5px;
+	border:none;
+}
+
+form{
+	background-color: red;
+	width: 330px;	
+	height: 241px;
+	margin-bottom: 0px;
+}
+

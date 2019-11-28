@@ -1,0 +1,37 @@
+body{
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: row;
+}
+h1{
+	font-size: 50px;
+	text-transform: uppercase;
+	font-weight: 10;
+}
+
+
+#bloqueA h1{
+	background-color: black;
+	color:orange;
+	width: 50vw;
+	height: 100vh;
+	margin:0 auto;
+	padding-bottom: 0px;
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+}
+
+#bloqueB h1{
+	background-color: orange;
+	color:black;
+	width: 50vw;
+	height: 100vh;
+	padding-top: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:0 auto;
+}
+

@@ -1,0 +1,110 @@
+
+
+/***** ESTRUCTURA *****/
+
+/*
+
+--> Direcció del elements
+
+	flex-direction: row; (per defecte)
+	flex-direction: row-reverse;
+	flex-direction: column;
+	flex-direction: column-reverse;
+
+
+--> Envolvent o multilinía
+	
+	flex-wrap: nowrap;  (Per defecte) Fa flexibles els fills idependentment de l'amplada
+	flex-wrap: wrap;  Si no hi cap salta un element de línia.
+	flex-wrap: wrap-reverse;  Si no hi cap salta un element de línia i canvia l’ordre de la linia no dels elements
+
+
+--> justify-content - alineació eix principal
+
+	justify-content: flex-start; (per defecte)
+	justify-content: flex-end;
+	justify-content: center;
+	justify-content: space-between; espai entre elements
+	justify-content: space-evenly; espai al voltant dels elements
+	justify-content: space-around; espai uniform entre elements (Nou) 
+
+
+--> align-items - alineació eix secundari
+
+	align-items: stretch; (per defecte) estirament
+	align-items: flex-start;
+	align-items: flex-end;
+	align-items: center;
+	align-items: baseline; Linia de Base de les tipografies. Proveu activant selecció de germans
+
+
+--> align-content: Ajusta les línies dins d'un contenidor flex quan hi ha espai extra a l'eix secundari. 
+	Aquesta propietat no té efecte en caixes flexibles d'una sola línia.;
+	
+	align-content: stretch; (per defecte) estirament
+	align-content: flex-start;
+	align-content: flex-end;
+	align-content: center;
+	align-content: space-between; espai entre elements
+	align-content: space-around; espai al voltant dels elements
+
+
+--> order: Es pot fer servir juntament amb :nth-child() per seleccionar qualsevol element d'un ordre de germans.
+	Es una mena d'agrupació. per defecte order: 0; per tots els elements;
+
+	section:nth-child(3) { order:0; background: red;}
+	section:nth-child(2) { order:0; }
+	section:nth-child(3) { order:0; }
+	section:nth-child(4) { order:0; }
+
+
+--> flex-grow: especifica quant creixerà l'element en relació amb la resta dels elements flexibles dins del mateix contenidor.
+	Aquest número es una fracció de l'espai buit. flex-grow: 0; Valor per defecte
+
+	section:nth-child(1) { flex-grow: 0; }
+	section:nth-child(2) { flex-grow: 0; }
+	section:nth-child(3) { flex-grow: 0; }
+	section:nth-child(4) { flex-grow: 0; }
+
+--> flex-shrink: Especifica com es reduirà l'element en relació amb la resta dels elements flexibles dins del mateix contenidor.
+	flex-shrink: 1; (Valor per defecte)
+	
+	section:nth-child(1) { flex-shrink: 1;}
+	section:nth-child(2) { flex-shrink: 1;}
+	section:nth-child(3) { flex-shrink: 1;}
+	section:nth-child(4) { flex-shrink: 1;}
+
+*/
+
+
+
+
+main { 
+	display: flex;
+	
+}
+
+
+
+/* ESTRUCTURA sense relació amb flex box */
+
+body  {padding:20px;}
+
+section { padding: 20px;}
+
+
+/***** TIPOGRAFIA *****/
+
+body { font-family: Arial, Helvetica, sans-serif; }
+
+
+
+/***** ESTETICA *****/
+
+main { background: LightGray; }
+
+section {
+background: orange;
+border: 1px solid #000;
+}
+ 
