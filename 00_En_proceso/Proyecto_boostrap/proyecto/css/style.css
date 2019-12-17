@@ -1,15 +1,75 @@
+/*importar fuentes desde Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap');
+/**/
+body{
+	background-color: #98a3a6;
+}
 
+/*color de la letra del navbar*/
+.texto_navbar a{
+	color:white !important;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 130%;
+	font-weight: 400;
+}
+/*otra forma de cambiar el color es llamando a la clase del navbar
 .navbar-light .navbar-nav .nav-link{
 	color:white;
 }
-
+*/
 .carousel-item img{
 		height: 100vh;
 		width: 100%;
 		object-fit: cover;	
-	}
+}
 
 .container-fluid{
 	padding-left:0px;
 	padding-right: 0px;
+}
+
+/*PROPIEDADES A LA PALETA DE PROYECTOS DESTACADOS*/
+.proy_destacados{
+	text-align: left;
+	font-family: 'Rajdhani', sans-serif;
+		 
+	font-weight: 400;
+	font-size: 20px;
+	height: 80px;
+	color: black;
+
+	display: flex;
+	justify-content: center;
+}
+.img_destacados img{
+	width: 100%;
+	height: 100%;	
+}
+
+.img_destacados, .proy_destacados{
+	width: 90%;
+	margin: 0 auto;
+	background-color: #343a40;
+	color: white;
+}
+
+.proy_destacados2{
+	padding-left: 0px;
+	min-height: 60px;
+}
+
+.img_destacados2 {
+	padding-right: 0;
+	padding-left: 0;
+}	
+.titulo_destacados{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 500;
+	color:#343a40;
+	font-size: 35px;	
+}
+
+.proy_destacados2 .pais{
+	font-weight: 200;
 }
