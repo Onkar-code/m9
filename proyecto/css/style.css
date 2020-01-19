@@ -127,25 +127,19 @@ iframe{
 
 /*---PROYECTOS DESTACADOS---*/
 .projects{
-	height: 70vh;
-    display: flex;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	display: flex;
     justify-content: center;
     align-items: center;
 	position: relative; 
 	
 }
-/*
-.projects .projects-titulo{
-	font-family: 'Barlow Condensed', sans-serif;
-	padding: 0 100% 0 100%;
-}*/
+
 
 .projects img{
-
 	height: 200px;
 	width: 350px;
-	/*height: 200px;
-	width: 350px;*/
 }
 
 .projects .item{
@@ -153,6 +147,7 @@ iframe{
 	overflow: hidden;
 	transition: 0.5s;
 }
+
 .projects .item:hover{
 	z-index:1;
 	transform: scale(1.25);
@@ -194,10 +189,8 @@ https://fontawesome.com/icons/map-marked-alt?style=solid
 https://fontawesome.com/icons/calendar-alt?style=regular
 https://fontawesome.com/icons/book-open?style=solid
 https://fontawesome.com/sessions/sign-in?next=%2Fkits
-
-
-
 */
+
 .iconos{
 	display: flex;
 	justify-content: space-around;
@@ -239,12 +232,156 @@ h1{
 
 /*---FOOTER--*/
 footer{
-	Height: 200px;
+	height: 200px;
 	background-color: black;
 	margin-top: auto;
 	color:white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Barlow Condensed', sans-serif;
 }
 
+.iconos_footer{
+	display:flex;
+	font-size: 160%;	
+}
+
+.iconos_footer i{
+	padding: 20px;
+}
+
+.text-footer p{	
+	padding-top: 10px;
+	font-size: 150%;
+}
+
+.iconos_footer i:hover{
+	color:#E0AE00;
+	transition: 1s;
+	transform: scale(1.25);
+}
 /*---FIN FOOTER--*/
 
 /*---MEDIA QUERYS---*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.carousel-inner .carousel-item .titulo{
+		font-size: 35px;
+	}
+
+	.articulos{
+		display:flex;
+		flex-direction: column;		
+	}
+
+	.articulos .articulos-header, .articulos .contenido-header{
+		font-size: 25px;
+	}
+	.articulos .menu-lateral p{
+		
+		font-size: 1.2em;
+	}
+
+	iframe{
+		/*width: 50%;*/
+		height: 200px;
+	}
+	.text-motorway{
+		padding-top: 50px;
+	}
+
+	.titulo-projects h1{
+		font-size: 2em;
+	}
+
+	.projects img{
+		height: 250px;
+		width: 100%;
+		
+	}
+	
+	.projects{
+		display: flex;
+		flex-direction: column;
+	} 
+	.projects .item{
+		overflow: inherit;
+		margin-bottom: 15px;	
+	}
+	.projects .titulo p{
+		transition: none;
+		color: rgba(255,255,255,0.7);
+		font-size: 27px;
+		transform: none;
+	}	
+
+	.iconos{
+		display: grid;
+		grid-template-rows: 1fr  1fr  1fr 1fr;
+		flex-direction: column-reverse;		
+	}	
+	
+	.iconos h1{
+		font-size: 20px;
+		}
+
+	footer{
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		text-align: center;
+		font-size: 100%;
+		padding: 8% 0 8% 0;
+	}
+
+}	
+/* Small devices (portrait tablets and large phones, 600px and up max 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+	.articulos{
+		display:flex;
+		flex-direction: column;		
+	}
+
+	iframe{
+		width: 100%;
+		height: 350px;
+	}
+
+	.titulo-projects h1{
+		padding-top: 60px;
+		font-size: 2em;
+		font-weight:600;
+	}
+	.projects{
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+	} 
+
+	.projects img{
+		height: 300px;
+		width: 700px;
+		
+	}
+
+	.projects .item{
+		overflow: inherit;
+		margin-bottom: 15px;	
+	}
+	.projects .titulo p{
+		transition: none;
+		color: rgba(255,255,255,0.7);
+		font-size: 40px;
+		transform: none;
+	}
+	
+	.iconos{
+		padding: 100px 0px 100px 0px;		
+		display: flex;
+		justify-content: space-around;
+		
+	}	
+
+}
