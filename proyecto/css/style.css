@@ -3,6 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap');
 
 /*DECLARAR VARIABLES DE FUENTE Y DE COLORES*/
+:root{
+	--Barlow-font-family:'Barlow Condensed', sans-serif;
+	--color-font: #ffffff;
+	--navbar-color-hover:#918b78;
+	--articulos-header-color:#343a40;
+	--footer-color: #000000;
+
+}
+
+/*--FIN VARIABLES--*/
 
 *{
 	padding: 0px;
@@ -10,11 +20,9 @@
 }
 
 body{
-	background-color: #98a3a6;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
-	/*background-image:url(../img/fondo.jpg);*/
 	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/fondo.jpg);
 	background-size: 2000px;
 	background-repeat:repeat; 
@@ -23,22 +31,18 @@ body{
 
 /*---NAVBAR CABECERA---*/
 .texto_navbar a{
-	color:white !important;
-	font-family: 'Barlow Condensed', sans-serif;
+	color: var(--color-font) !important;
+	font-family: var(--Barlow-font-family);
 	font-size: 130%;
 	font-weight: 400;
 }
 
 .texto_navbar a:hover{
-	color:#918b78 !important;
+	color:var(--navbar-color-hover) !important;
 }
-/*otra forma de cambiar el color es llamando a la clase del navbar
-.navbar-light .navbar-nav .nav-link{
-	color:white;
-}
-*/
-
 /*---FIN NAVBAR CABECERA---*/
+
+
 
 /*---CAROUSEL---*/	
 .carousel-item img{
@@ -60,8 +64,8 @@ body{
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 60px;
-	font-family: 'Barlow Condensed', sans-serif;
-	color: white;
+	font-family: var(--Barlow-font-family);
+	color: var(--color-font);
 	width: 100%;
 	text-align:center;
 }
@@ -69,25 +73,21 @@ body{
 
 /*---ARTICULOS---*/
 .articulos{
-	/*border: 2px solid red;*/
 	width: 80vw;
 	min-height: 900px;
 	margin: auto;
-	/*display: flex;*/
 	display:grid;
 	grid-template-columns:60% 40%;
 	
 }
 
 .articulos .contenido-principal{
-	/*width: 80%;*/
-	/*border: 2px solid blue;	*/
 	margin-right: 2%;
 }
 
 .articulos .contenido-principal p,.articulos .menu-lateral p{
 	padding: 2%;
-	font-family: 'Barlow Condensed', sans-serif;
+	font-family: var(--Barlow-font-family);
 }
 .articulos .menu-lateral p{
 	text-transform: uppercase;
@@ -107,10 +107,10 @@ body{
 }
 
 .articulos .articulos-header, .articulos .contenido-header{
-	background-color: #343a40;
+	background-color: var(--articulos-header-color);
 	border: 2px solid black;
-	color:white !important;
-	font-family: 'Barlow Condensed', sans-serif;
+	color: var(--color-font) !important;
+	font-family: var(--Barlow-font-family);
 	height: 40px;
 	font-size: 130%;
 	font-weight: 400;
@@ -133,9 +133,7 @@ iframe{
     justify-content: center;
     align-items: center;
 	position: relative; 
-	
 }
-
 
 .projects img{
 	height: 200px;
@@ -167,8 +165,8 @@ iframe{
 }
 
 .projects .titulo p{
-	color:white;
-	font-family: 'Barlow Condensed', sans-serif;
+	color:var(--color-font);
+	font-family: var(--Barlow-font-family);
 	transition: 0.5s;
 	font-size: 20px;
 	font-weight: 400;
@@ -179,17 +177,8 @@ iframe{
 	transform: translateY(0px);
 	transition-delay: 0.6s;
 }
-
-
 /*---FIN PROYECTOS DESTACADOS---*/
 
-
-/*--ICONOS--
-https://fontawesome.com/icons/map-marked-alt?style=solid
-https://fontawesome.com/icons/calendar-alt?style=regular
-https://fontawesome.com/icons/book-open?style=solid
-https://fontawesome.com/sessions/sign-in?next=%2Fkits
-*/
 
 .iconos{
 	display: flex;
@@ -197,7 +186,7 @@ https://fontawesome.com/sessions/sign-in?next=%2Fkits
 	padding-bottom: 5%;
 	padding-left: 10%;
 	padding-right: 10%;
-	font-family: 'Barlow Condensed', sans-serif;
+	font-family: var(--Barlow-font-family);
 }
 
 .iconos i{
@@ -209,7 +198,7 @@ padding-bottom: 20px;
 	font-size: 30px;
 	}
 .education i:hover, .publications i:hover, .events i:hover, .countries i:hover{
-	color:#E0AE00;
+	color:rgba(204, 165, 31,0.8);
 	transition: 1s;
 	transform: scale(1.25);
 }
@@ -233,13 +222,13 @@ h1{
 /*---FOOTER--*/
 footer{
 	height: 200px;
-	background-color: black;
+	background-color: var(--footer-color);
 	margin-top: auto;
-	color:white;
+	color: var(--color-font);
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Barlow Condensed', sans-serif;
+	font-family: var(--Barlow-font-family);
 }
 
 .iconos_footer{
@@ -256,10 +245,20 @@ footer{
 	font-size: 150%;
 }
 
+#facebook:hover{
+	color:#3b5998 ;
+}
+#twitter:hover{
+	color:#00acee;
+}
+#youtube:hover{
+	color:#c4302b;
+	
+}
+
 .iconos_footer i:hover{
-	color:#E0AE00;
 	transition: 1s;
-	transform: scale(1.25);
+	transform: scale(1.35);
 }
 /*---FIN FOOTER--*/
 
