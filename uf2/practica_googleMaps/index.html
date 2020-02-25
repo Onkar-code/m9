@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.416108, lng: 2.199342},
+          zoom: 15
+        });
+      }
+    </script>
+    <script>
+
+      $(document).ready(function(){
+        var img = $('#map').find('img[src$="/chicken.png"]');
+        $(img).css("background-color", "red");
+        //alert($(img).attr("style"));
+      });
+
+
+      function initMap() {
+        
+        // añadido con el objetivo de importar el archivo de JSON
+        var styles="";
+        $.ajax({
+          async: false,
+          url: "arxiu.json",
+          dataType: "json"
+        }).done(function( data ) {
+          styles=data;
+        });
+       
+
+        var myLatLng = {lat: 41.416108, lng: 2.199342};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng,
+          styles: styles
+        });
+        
+        var locations = [[{lat: 41.403734, lng: 2.174367}, "Sagrada família"],
+         [{lat: 41.391758, lng: 2.164732}, "Casa Batlló"],
+         [{lat: 41.395405, lng: 2.161940}, "La Pedrera"],
+         [{lat: 41.364071, lng: 2.027663}, "Cripta Gaudí"],
+         [{lat: 41.414583, lng: 2.152705}, "Parc Güell"],
+         [{lat: 41.403530, lng: 2.150613}, "Casa Vicens"],
+         [{lat: 41.409711, lng: 2.126797}, "Torre Bellesguard"]];
+
+        
+        /*alert(locations[4][0].lat);*/
+        var markers = [];
+
+        for(var i = 0; i < locations.length; i++){
+            var lat = locations[i][0].lat;
+            var lng = locations[i][0].lng;        
+            var title = locations[i][1];
+            
+            /*alert(locations[i][1])*/
+
+            if(i % 2 == 0) {
+              picto = "health.png"
+            } else{
+              picto = "security.png"
+            }
+
+            var marker = new google.maps.Marker({
+            position: {lat: lat, lng: lng},
+            map: map,            
+            icon: picto,
+            title: title,
+            info: locations[i][1]
+            }); 
+
+            var infoWindow = new google.maps.InfoWindow();
+google.maps.event.addListener(marker, 'click', function() {
+infoWindow.setContent( this.info );
+    infoWindow.open(map,this);
+});
+            markers.push(marker);                                 
+        } 
+
+        /*function restartMap(){}*/
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: 'chicken.png',
+          title: 'Hello World!',
+
+         
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content: 'Jelou world aim da chiken'
+            });
+
+            marker.addListener('click', function() {
+            infowindow.open(map, marker);
+            });
+           
+        var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      
+       
+      }
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LqPNfReHlA4RTAU1YOuVKZxTqvCPa0g&callback=initMap"
+    async defer></script>
+  </body>
+</html>

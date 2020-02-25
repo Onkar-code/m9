@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+video{
+	object-position: bottom;
+	object-fit: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+
+/*manera chapuzera de hacer el overlay
+.overlay{
+	height: 50vh;
+	width: 100vw;
+	background-color: rgba(0,0,255,0.5);
+	position:absolute;
+	top:0;
+}
+*/
+.container::after{
+	content: "";
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position:absolute;
+	top:0px;
+	left: 0px;
+
+}
+
+.father{
+	position:absolute;
+	top: 30%;
+	left: 35%;
+	z-index: 1;
+}
+
+p{
+	font-family: 'Odibee Sans', cursive; 
+	color:white;
+	font-size: 60px;
+}
+
+input{
+	box-sizing: border-box;
+}
+
+
+</style>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [      
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+</head>
+<body>
+	<div class="container">
+		<video muted autoplay loop>
+		 <source src="night.mp4" type="">
+		</video>
+		<div class="overlay"></div>		
+	</div>
+	<div class="father">
+		<div class="titulo">
+			<p>WELCOME TO THE JUNGLE</p><br> 
+		</div>
+		<div class="ui-widget">
+		  <label for="tags"></label>
+		  <form>
+			  <input id="tags" placeholder="Search" >
+			  <input type="reset" value="Reset">
+			  <input type="submit" value="Serach">
+			</form>
+		</div>
+		<div class="iframe">
+			<iframe width="100%" height="480px" src="https://poly.google.com/view/a7ZUdvenYSR/embed?chrome=min" frameborder="0" style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
+		</div>
+
+	</div>
+	
+</body>
+</html>
